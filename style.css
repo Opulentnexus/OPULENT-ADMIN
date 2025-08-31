@@ -13,6 +13,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
+   font-family: 'Quicksand', sans-serif;
 }
 
 /* Topbar (Navigation style) */
@@ -33,6 +34,7 @@ body {
   font-size: 18px;
   font-weight: 600;
   letter-spacing: -0.2px;
+    font-family: 'Krona One', sans-serif;
 }
 .profile-btn {
   border: none;
@@ -78,6 +80,7 @@ body {
   font-weight: 600;
   margin-bottom: 12px;
   color: #111;
+   font-family: 'Quicksand', sans-serif;
 }
 
 /* Forms */
@@ -113,6 +116,7 @@ form button {
   font-weight: 600;
   cursor: pointer;
   transition: 0.2s;
+  font-family: 'Quicksand', sans-serif;
 }
 form button:active {
   background: #0051c9;
@@ -174,7 +178,7 @@ form button:active {
   flex: 1;
   text-align: center;
   text-decoration: none;
-  color: #777;
+  color: #000000;
   font-size: 12px;
   font-weight: 500;
   display: flex;
@@ -183,6 +187,8 @@ form button:active {
   gap: 4px;
   transition: all 0.3s ease;
   padding: 6px 0;
+  font-family: 'Quicksand', sans-serif;
+  
 }
 
 /* Replace dot with emoji icons or FontAwesome later */
@@ -304,38 +310,37 @@ form button:active {
   background: #dc2626;
 }
 
-/* Mobile friendly */
-@media (max-width: 768px) {
-  #taskList li {
-    padding: 12px;
-  }
-  .task-header b {
-    font-size: 15px;
-  }
-  .task-footer {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 6px;
-  }
-  .delete-task-btn {
-    width: 100%;
-    text-align: center;
-    padding: 8px;
-  }
+
+
+
+
+
+
+/* Remove background only for the notifications wrapper */
+.card:has(#notificationList) {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  padding: 0 !important;   /* get rid of extra spacing */
+  margin-top: 28px;
 }
 
 
 #notificationList {
   list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 12px;
 }
+
 #notificationList li {
-  background: #f0f9ff;
-  border-left: 4px solid #007aff;
-  padding: 10px 12px;
-  border-radius: 8px;
-  font-size: 14px;
-  color: #111;
+  background: #fff;
+  border-radius: 16px;
+  padding: 14px 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  font-size: 15px;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
 }
+
